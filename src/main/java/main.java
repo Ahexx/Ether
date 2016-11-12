@@ -1,16 +1,9 @@
-import java.net.URL;
-import java.net.URLClassLoader;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pl.ether.Hello.Hello;
+import pl.ether.Web.URLDownloader;
+import pl.ether.Web.interfaces.URLDownloaderI;
 import pl.ether.forms.MainForm;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 
 /**
@@ -28,7 +21,10 @@ public class main{
         
         MainForm mf = (MainForm) ctx.getBean("MainWindow");
         mf.run(args);
-
+        
+        URLDownloader ud = new URLDownloader();
+        ud.setUrl("http://www.google.pl");
+        System.out.println(ud.countHash());
 
         
     }
