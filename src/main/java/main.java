@@ -1,36 +1,32 @@
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pl.ether.Web.URLDownloader;
+import pl.ether.Web.interfaces.URLDownloaderI;
+import pl.ether.forms.MainForm;
+
 
 /**
  * Created by nikk on 09.11.16.
  */
-public class main extends Application {
+public class main{
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-    }
+   
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-//    	ClassLoader cl = ClassLoader.getSystemClassLoader();
-//    	URL[] url = ((URLClassLoader)cl).getURLs();
-//    	for (URL u : url) {
-//    		System.out.println(u);
-//    	}
-//        ApplicationContext ctx = new ClassPathXmlApplicationContext("SpringBeans.xml");
 
-//        Hello bean = (Hello) ctx.getBean("HelloBean2");
 
-//        bean.sayHello();
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("SpringBeans.xml");
+        
+        MainForm mf = (MainForm) ctx.getBean("MainWindow");
+        mf.run(args);
+        
+        URLDownloader ud = new URLDownloader();
+        ud.setUrl("http://www.google.pl");
+        System.out.println(ud.countHash());
 
-        launch(args);
+        
     }
 
 }
