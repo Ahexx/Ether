@@ -20,7 +20,7 @@ public class main {
     	}
         ApplicationContext ctx = new ClassPathXmlApplicationContext("SpringBeans.xml");
         
-        Hello bean = (Hello) ctx.getBean("HelloBean");
+        Hello bean = (Hello) ctx.getBean("HelloBean2");
         
         bean.sayHello();
     }

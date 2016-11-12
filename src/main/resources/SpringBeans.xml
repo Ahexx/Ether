@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-	<bean id="HelloBean" class="pl.ether.Hello.Hello">
+	<bean id="HelloBean2" class="pl.ether.Hello.Hello">
 	</bean>
 
 </beans>
