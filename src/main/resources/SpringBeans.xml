@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<bean id="HelloBean2" class="pl.ether.Hello.Hello">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+ 
+	<bean id="Scheduler" class="pl.ether.Main.Scheduler">
 	</bean>
+	
+	<task:scheduled-tasks scheduler="myScheduler">
+		<task:scheduled ref="Scheduler" method="run" fixed-delay="60000"/>
+	</task:scheduled-tasks>
+	
+	<task:scheduler id="myScheduler"/>
 
 </beans>
