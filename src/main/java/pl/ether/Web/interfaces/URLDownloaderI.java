@@ -1,5 +1,7 @@
 package pl.ether.Web.interfaces;
 
+import pl.ether.models.WebSite;
+
 public interface URLDownloaderI {
 	/*
 	 * Funkcja pobiera kod Ÿród³owy strony
@@ -15,4 +17,8 @@ public interface URLDownloaderI {
 	 * Funkcja wylicza sume kontrolon¹ dla strony
 	 */
 	public String countHash();
+	
+	public boolean isTimeToRefresh();
+	
+	public boolean checkWebSite();
 }

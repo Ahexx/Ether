@@ -10,6 +10,13 @@ public class WebSite {
 	private LocalDateTime modyficationDate;
 	private Integer refreshInterval;
 	private ValidationLevel validationLevel;
+	private String hash;
+	public String getHash() {
+		return hash;
+	}
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -56,7 +63,7 @@ public class WebSite {
 	public String toString() {
 		return "WebSite [id=" + id + ", name=" + name + ", URL=" + URL + ", creationDate=" + creationDate
 				+ ", modyficationDate=" + modyficationDate + ", refreshInterval=" + refreshInterval
-				+ ", validationLevel=" + validationLevel + "]";
+				+ ", validationLevel=" + validationLevel + ", hash=" + hash + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -64,6 +71,7 @@ public class WebSite {
 		int result = 1;
 		result = prime * result + ((URL == null) ? 0 : URL.hashCode());
 		result = prime * result + ((creationDate == null) ? 0 : creationDate.hashCode());
+		result = prime * result + ((hash == null) ? 0 : hash.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((modyficationDate == null) ? 0 : modyficationDate.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
@@ -90,6 +98,11 @@ public class WebSite {
 				return false;
 		} else if (!creationDate.equals(other.creationDate))
 			return false;
+		if (hash == null) {
+			if (other.hash != null)
+				return false;
+		} else if (!hash.equals(other.hash))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -114,6 +127,7 @@ public class WebSite {
 			return false;
 		return true;
 	}
+	
 	
 	
 }
