@@ -8,9 +8,14 @@ import java.net.URLConnection;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
+import java.util.function.Supplier;
 
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
+import pl.ether.models.ValidationLevel;
 import pl.ether.models.WebSite;
 
 public class URLDownloader  {
@@ -78,13 +83,44 @@ public class URLDownloader  {
 
 	public static boolean checkWebSite(WebSite w) {
 		String pageSrc = URLDownloader.getPageSource(w);
-		String hash  = URLDownloader.countHash(pageSrc);
-		if (!hash.equals(w.getHash())) {
-			w.setHash(hash);
-			// Zmieniæ na tray
-			log.info("COŒ siê zmieni³o na: " + w.getName());
+		boolean retn = false;
+		if (w.getValidationLevel() == ValidationLevel.ALL) {
+			retn = URLDownloader.check(w,pageSrc,() -> {
+				String hash = URLDownloader.countHash(pageSrc);
+				if (!hash.equals(w.getHash())) {
+					log.info("Coœ siê zmieni³o na: " + w.getName());
+					w.setHash(hash);
+					return true;
+				}
+				return false;
+			});
+		} else if (w.getValidationLevel() == ValidationLevel.BODY) {
+			retn = URLDownloader.check(w, pageSrc, () -> {
+				Document doc = Jsoup.parse(pageSrc);
+				String hash = URLDownloader.countHash(doc.body().toString());
+				if (!hash.equals(w.getHash())) {
+					log.info("Coœ siê zmieni³o na [body]: " + w.getName());
+					w.setHash(hash);
+					return true;
+				}
+				return false;
+			});
+		} else if (w.getValidationLevel() == ValidationLevel.BODY_TEXT) {
+			retn = URLDownloader.check(w, pageSrc, () -> {
+				String hash = URLDownloader.countHash(Jsoup.parse(pageSrc).body().text());
+				if (!hash.equals(w.getHash())) {
+					log.info("Coœ siê zmieni³o na [body_text] : " + w.getName());
+					w.setHash(hash);
+					return true;
+				}
+				return false;
+			});
 		}
-		return false;
+		
+		return retn;
+	}
+	private static boolean check(WebSite w,String page , Supplier<Boolean> ck) {
+		return ck.get();
 	}
 
 }

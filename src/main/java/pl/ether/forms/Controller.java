@@ -56,7 +56,7 @@ public class Controller {
         w.setName("FotoTravelWorld Krzysztof Podgórzak");
         w.setRefreshInterval(1); // 1 minuty
         w.setURL("http://www.fototravelworld.com");
-        w.setValidationLevel(ValidationLevel.ALL);
+        w.setValidationLevel(ValidationLevel.BODY_TEXT);
         w.setModyficationDate(w.getCreationDate());
         WebSiteData.add(w);
     }
