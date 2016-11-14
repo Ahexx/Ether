@@ -8,7 +8,7 @@ import pl.ether.models.WebSite;
 
 public class Scheduler {
 	public void run() {
-		System.out.println("[SCHEDULER] Start at: " + LocalDateTime.now());
+		System.out.println("\n[SCHEDULER] Start at: " + LocalDateTime.now());
 		// Przejdü po tabelce i sprawdü strony
 		for (int i = 0; i < Controller.WebSiteData.size(); i++) {
 			WebSite proccesing = Controller.WebSiteData.get(i);

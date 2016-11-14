@@ -58,12 +58,17 @@ public class URLDownloader  {
 	}
 
 	public static boolean isTimeToRefresh(WebSite w) {
-		System.out.println("Check started at: " + LocalDateTime.now());
-		System.out.println(w);
+		
 		LocalDateTime tmp = w.getModyficationDate().plusMinutes(w.getRefreshInterval());
 		int res = tmp.compareTo(LocalDateTime.now());
-		if (res == -1) 
+		
+		if (res == -1) {
+			
+			System.out.println("Check started at: " + LocalDateTime.now());
+			System.out.println("\t"+w);
+			System.out.println("\tCompare result : " + res);
 			return true;
+		}
 		
 		return false;
 	}
