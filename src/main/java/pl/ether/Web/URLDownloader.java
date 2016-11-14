@@ -9,10 +9,13 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 
+import org.apache.log4j.Logger;
+
 import pl.ether.models.WebSite;
 
 public class URLDownloader  {
 
+	static Logger log = Logger.getLogger(URLDownloader.class.getName());
 	private WebSite current;
 	private String pageSource;
 	public void setWebSite(WebSite tmp) {
@@ -64,9 +67,9 @@ public class URLDownloader  {
 		
 		if (res == -1) {
 			
-			System.out.println("Check started at: " + LocalDateTime.now());
-			System.out.println("\t"+w);
-			System.out.println("\tCompare result : " + res);
+			log.info("Check started at: " + LocalDateTime.now());
+			log.info("\t"+w);
+			log.info("\tCompare result : " + res);
 			return true;
 		}
 		
@@ -79,7 +82,7 @@ public class URLDownloader  {
 		if (!hash.equals(w.getHash())) {
 			w.setHash(hash);
 			// Zmieniæ na tray
-			System.out.println("COŒ siê zmieni³o na: " + w.getName());
+			log.info("COŒ siê zmieni³o na: " + w.getName());
 		}
 		return false;
 	}
