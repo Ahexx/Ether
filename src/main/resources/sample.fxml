@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="400.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.ether.Hello.Controller">
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="400.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.ether.forms.Controller">
     <columnConstraints>
         <ColumnConstraints />
     </columnConstraints>
@@ -33,7 +33,7 @@
                     <children>
                         <TextField fx:id="id" promptText="id" />
                         <TextField fx:id="name" promptText="name" />
-                        <Button mnemonicParsing="false" onAction="#addWebsite" text="+" />
+                        <Button mnemonicParsing="false" onAction="#addWebSite" text="+" />
                     </children>
                 </HBox>
             </bottom>

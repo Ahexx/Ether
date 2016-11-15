@@ -9,10 +9,14 @@
  
 	<bean id="Scheduler" class="pl.ether.Main.Scheduler">
 	</bean>
+
+	<bean id="MainWindow" class="pl.ether.forms.MainForm">
+	</bean>
 	
 	<task:scheduled-tasks scheduler="myScheduler">
 		<task:scheduled ref="Scheduler" method="run" fixed-delay="60000"/>
 	</task:scheduled-tasks>
+
 	
 	<task:scheduler id="myScheduler"/>
 </beans>

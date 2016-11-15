@@ -13,6 +13,20 @@ public class WebSite {
     private ValidationLevel validationLevel;
     private String hash;
 
+    public WebSite() {
+    }
+
+    public WebSite(Long id, String name, String URL, LocalDateTime creationDate, LocalDateTime modificationDate, Integer refreshInterval, ValidationLevel validationLevel, String hash) {
+        this.id = id;
+        this.name = name;
+        this.URL = URL;
+        this.creationDate = creationDate;
+        this.modificationDate = modificationDate;
+        this.refreshInterval = refreshInterval;
+        this.validationLevel = validationLevel;
+        this.hash = hash;
+    }
+
     public Long getId() {
         return id;
     }

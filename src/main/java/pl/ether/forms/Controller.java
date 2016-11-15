@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import pl.ether.models.ValidationLevel;
 import pl.ether.models.WebSite;
 
@@ -35,39 +36,48 @@ public class Controller {
     @FXML
     public void initialize() {
         // Initialize the person table
-        // idColumn.setCellValueFactory(new PropertyValueFactory<WebSite, Integer>("id"));
-        //nameColumn.setCellValueFactory(new PropertyValueFactory<WebSite, String>("name"));
-//        table.setItems(WebSiteData);
-        WebSiteData = FXCollections.observableArrayList();
-        WebSite w = new WebSite();
-        w.setCreationDate(LocalDateTime.now());
-        w.setId(0L);
-        w.setName("Google");
-        w.setRefreshInterval(3); // 3 minuty
-        w.setURL("http://www.google.pl");
-        w.setValidationLevel(ValidationLevel.ALL);
-        w.setModificationDate(w.getCreationDate());
-
-        WebSiteData.add(w);
-        w = new WebSite();
-        w.setCreationDate(LocalDateTime.now());
-        w.setId(1L);
-        w.setName("FotoTravelWorld Krzysztof Podgórzak");
-        w.setRefreshInterval(1); // 1 minuty
-        w.setURL("http://www.fototravelworld.com");
-        w.setValidationLevel(ValidationLevel.BODY_TEXT);
-        w.setModificationDate(w.getCreationDate());
-        WebSiteData.add(w);
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        table.setItems(webSiteData);
+        newObjects();
     }
 
-    public static ObservableList<WebSite> WebSiteData;
+    private void newObjects() {
+
+        WebSite webSite = new WebSite();
+        webSite.setCreationDate(LocalDateTime.now());
+        webSite.setId(0L);
+        webSite.setName("Google");
+        webSite.setRefreshInterval(3); // 3 minuty
+        webSite.setURL("http://www.google.pl");
+        webSite.setValidationLevel(ValidationLevel.ALL);
+        webSite.setModificationDate(webSite.getCreationDate());
+        webSiteData.add(webSite);
+
+        webSite = new WebSite();
+        webSite.setCreationDate(LocalDateTime.now());
+        webSite.setId(1L);
+        webSite.setName("FotoTravelWorld Krzysztof Podgórzak");
+        webSite.setRefreshInterval(1); // 1 minuty
+        webSite.setURL("http://www.fototravelworld.com");
+        webSite.setValidationLevel(ValidationLevel.BODY_TEXT);
+        webSite.setModificationDate(webSite.getCreationDate());
+        webSiteData.add(webSite);
+    }
+
+    private ObservableList<WebSite> webSiteData = FXCollections.observableArrayList();
 
     @FXML
-    protected void addWebSite(ActionEvent event) {
-        WebSiteData = table.getItems();
-        WebSiteData.add(
-                new WebSite(
-                ));
-        table.setItems(WebSiteData);
+    private void addWebSite(ActionEvent event) {
+        webSiteData = table.getItems();
+
+        WebSite webSite = new WebSite();
+        webSite.setId(Long.valueOf(id.getText()));
+        webSite.setName(name.getText());
+
+        webSiteData.add(
+                webSite
+        );
+        table.setItems(webSiteData);
     }
 }
