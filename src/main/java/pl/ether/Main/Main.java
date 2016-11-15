@@ -26,4 +26,8 @@ public class Main {
 //        ud.setUrl("http://www.google.pl");
 //        System.out.println(ud.countHash());
     }
+
+    public static void stop() {
+        System.exit(1);
+    }
 }
