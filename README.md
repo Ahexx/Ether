@@ -1,5 +1,5 @@
 # Ether
-This main task of this program to observe the websites defined by the user. It is usefull when we don't have a time to check all the time
+This main task of this program to observe the websites defined by the user. It is usefull when we don't have time to check
 if someone for example respond on forum or we are waiting for special kind of information on the website.
 
 Current version is <b>alpha</b> and it is still in progress.
