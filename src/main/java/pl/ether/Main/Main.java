@@ -27,4 +27,8 @@ public class Main {
         WebSite w = new WebSite.WebSiteBuilder().setId(1l).setURL("http://").build();
         
     }
+
+    public static void stop() {
+        System.exit(1);
+    }
 }
