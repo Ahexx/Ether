@@ -16,7 +16,7 @@ import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
 
-public class URLDownloaderImpl implements URLDownloader {
+public class URLDownloaderImpl  {
 
     private static final Logger log = Logger.getLogger(URLDownloaderImpl.class);
     private WebSite current;
@@ -113,31 +113,6 @@ public class URLDownloaderImpl implements URLDownloader {
         }
 
         return retn;
-    }
-
-    @Override
-    public String getPageSource() {
-        return null;
-    }
-
-    public boolean isPageChangedFastCheck() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public String countHash() {
-        return null;
-    }
-
-    @Override
-    public boolean isTimeToRefresh() {
-        return false;
-    }
-
-    @Override
-    public boolean checkWebSite() {
-        return false;
     }
 
     private static boolean check(WebSite w, String page, Supplier<Boolean> ck) {

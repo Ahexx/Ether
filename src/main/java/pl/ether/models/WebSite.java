@@ -168,4 +168,41 @@ public class WebSite {
             return false;
         return true;
     }
+    public static class WebSiteBuilder {
+    	private WebSite obj;
+    	public WebSiteBuilder() {
+    		this.obj = new WebSite();
+    	}
+    	public WebSiteBuilder setId(Long id) {
+    		this.obj.setId(id);
+    		return this;
+    	}
+    	public WebSiteBuilder setName(String name) {
+    		this.obj.setName(name);
+    		return this;
+    	}
+    	public WebSiteBuilder setURL(String URL) {
+    		this.obj.setURL(URL);
+    		return this;
+    	}
+    	public WebSiteBuilder setCreationDate(LocalDateTime time) {
+    		this.obj.setCreationDate(time);
+    		 return this;
+    	}
+    	public WebSiteBuilder setModyficationDate(LocalDateTime time) {
+    		this.obj.setModificationDate(time);
+    		return this;
+    	}
+    	public WebSiteBuilder setRefreshInterval(Integer inter) {
+    		this.obj.setRefreshInterval(inter);
+    		return this;
+    	}
+    	public WebSiteBuilder setValidationLevel(ValidationLevel lvl) {
+    		this.obj.setValidationLevel(lvl);
+    		return this;
+    	}
+    	public WebSite build() {
+    		return this.obj;
+    	}
+    }
 }

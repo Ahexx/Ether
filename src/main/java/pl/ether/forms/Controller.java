@@ -65,7 +65,7 @@ public class Controller {
         webSiteData.add(webSite);
     }
 
-    private ObservableList<WebSite> webSiteData = FXCollections.observableArrayList();
+    public static ObservableList<WebSite> webSiteData = FXCollections.observableArrayList();
 
     @FXML
     private void addWebSite(ActionEvent event) {
