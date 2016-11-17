@@ -47,6 +47,7 @@ public class Controller {
 
     @FXML
     public void initialize() {
+
         // Initialize the person table
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));

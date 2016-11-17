@@ -16,9 +16,10 @@ import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
 
-public class URLDownloaderImpl  {
+public class URLDownloaderImpl {
 
     private static final Logger log = Logger.getLogger(URLDownloaderImpl.class);
+
     private WebSite current;
     private String pageSource;
 
@@ -26,10 +27,10 @@ public class URLDownloaderImpl  {
         current = tmp;
     }
 
-    public static String getPageSource(WebSite w) {
+    public static String getPageSource(WebSite site) {
         StringBuilder sb = new StringBuilder();
         try {
-            URL url = new URL(w.getURL());
+            URL url = new URL(site.getURL());
             URLConnection uc = url.openConnection();
             BufferedInputStream bis = new BufferedInputStream(uc.getInputStream());
             int r = 0;
@@ -60,15 +61,15 @@ public class URLDownloaderImpl  {
         return hash;
     }
 
-    public static boolean isTimeToRefresh(WebSite w) {
+    public static boolean isTimeToRefresh(WebSite site) {
 
-        LocalDateTime tmp = w.getModificationDate().plusMinutes(w.getRefreshInterval());
+        LocalDateTime tmp = site.getModificationDate().plusMinutes(site.getRefreshInterval());
         int res = tmp.compareTo(LocalDateTime.now());
 
         if (res == -1) {
 
             log.info("Check started at: " + LocalDateTime.now());
-            log.info("\t" + w);
+            log.info("\t" + site);
             log.info("\tCompare result : " + res);
             return true;
         }
@@ -76,36 +77,36 @@ public class URLDownloaderImpl  {
         return false;
     }
 
-    public static boolean checkWebSite(WebSite w) {
-        String pageSrc = URLDownloaderImpl.getPageSource(w);
+    public static boolean checkWebSite(WebSite site) {
+        String pageSrc = URLDownloaderImpl.getPageSource(site);
         boolean retn = false;
-        if (w.getValidationLevel() == ValidationLevel.ALL) {
-            retn = URLDownloaderImpl.check(w, pageSrc, () -> {
+        if (site.getValidationLevel() == ValidationLevel.ALL) {
+            retn = URLDownloaderImpl.check(site, pageSrc, () -> {
                 String hash = URLDownloaderImpl.countHash(pageSrc);
-                if (!hash.equals(w.getHash())) {
-                    log.info("Coś się zmieniło na: " + w.getName());
-                    w.setHash(hash);
+                if (!hash.equals(site.getHash())) {
+                    log.info("Coś się zmieniło na: " + site.getName());
+                    site.setHash(hash);
                     return true;
                 }
                 return false;
             });
-        } else if (w.getValidationLevel() == ValidationLevel.BODY) {
-            retn = URLDownloaderImpl.check(w, pageSrc, () -> {
+        } else if (site.getValidationLevel() == ValidationLevel.BODY) {
+            retn = URLDownloaderImpl.check(site, pageSrc, () -> {
                 Document doc = Jsoup.parse(pageSrc);
                 String hash = URLDownloaderImpl.countHash(doc.body().toString());
-                if (!hash.equals(w.getHash())) {
-                    log.info("Coś się zmieniło na [body]: " + w.getName());
-                    w.setHash(hash);
+                if (!hash.equals(site.getHash())) {
+                    log.info("Coś się zmieniło na [body]: " + site.getName());
+                    site.setHash(hash);
                     return true;
                 }
                 return false;
             });
-        } else if (w.getValidationLevel() == ValidationLevel.BODY_TEXT) {
-            retn = URLDownloaderImpl.check(w, pageSrc, () -> {
+        } else if (site.getValidationLevel() == ValidationLevel.BODY_TEXT) {
+            retn = URLDownloaderImpl.check(site, pageSrc, () -> {
                 String hash = URLDownloaderImpl.countHash(Jsoup.parse(pageSrc).body().text());
-                if (!hash.equals(w.getHash())) {
-                    log.info("Coś się zmieniło na [body_text] : " + w.getName());
-                    w.setHash(hash);
+                if (!hash.equals(site.getHash())) {
+                    log.info("Coś się zmieniło na [body_text] : " + site.getName());
+                    site.setHash(hash);
                     return true;
                 }
                 return false;
@@ -115,7 +116,7 @@ public class URLDownloaderImpl  {
         return retn;
     }
 
-    private static boolean check(WebSite w, String page, Supplier<Boolean> ck) {
+    private static boolean check(WebSite site, String page, Supplier<Boolean> ck) {
         return ck.get();
     }
 }

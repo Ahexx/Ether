@@ -9,9 +9,9 @@ import pl.ether.Main.Main;
 
 public class MainForm extends Application {
 
-    private Parent a;
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
         primaryStage.setTitle("Ether");
         primaryStage.setScene(new Scene(root, 300, 275));
@@ -24,6 +24,7 @@ public class MainForm extends Application {
 
     @Override
     public void stop() throws Exception {
+
         Main.stop();
         super.stop();
     }
