@@ -22,22 +22,39 @@ public class Controller {
     private TableView<WebSite> table;
 
     @FXML
-    private TableColumn<WebSite, Integer> idColumn;
+    private TableColumn<WebSite, Long> idColumn;
 
     @FXML
     private TableColumn<WebSite, String> nameColumn;
 
     @FXML
-    private TextField id;
+    private TableColumn<WebSite, String> urlColumn;
+
+    @FXML
+    private TableColumn<WebSite, LocalDateTime> createDateColumn;
+
+    @FXML
+    private TableColumn<WebSite, LocalDateTime> modificationDateColumn;
+
+    @FXML
+    private TableColumn<WebSite, Integer> intervalColumn;
 
     @FXML
     private TextField name;
+
+    @FXML
+    private TextField url;
 
     @FXML
     public void initialize() {
         // Initialize the person table
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        urlColumn.setCellValueFactory(new PropertyValueFactory<>("URL"));
+        createDateColumn.setCellValueFactory(new PropertyValueFactory<>("creationDate"));
+        modificationDateColumn.setCellValueFactory(new PropertyValueFactory<>("modificationDate"));
+        intervalColumn.setCellValueFactory(new PropertyValueFactory<>("refreshInterval"));
+
         table.setItems(webSiteData);
         newObjects();
     }
@@ -72,8 +89,8 @@ public class Controller {
         webSiteData = table.getItems();
 
         WebSite webSite = new WebSite();
-        webSite.setId(Long.valueOf(id.getText()));
         webSite.setName(name.getText());
+        webSite.setURL(url.getText());
 
         webSiteData.add(
                 webSite

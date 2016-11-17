@@ -1,10 +1,12 @@
 package pl.ether.Main;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import pl.ether.Web.URLDownloaderImpl;
 import pl.ether.forms.Controller;
 import pl.ether.models.WebSite;
 
 import java.time.LocalDateTime;
+
 
 public class Scheduler {
     public void run() {

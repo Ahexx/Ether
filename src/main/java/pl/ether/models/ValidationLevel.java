@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 public enum ValidationLevel {
 	ALL(0), BODY(1), BODY_TEXT(3);
 	int choice;
-	private static Logger log = Logger.getLogger(ValidationLevel.class);
+	private static final Logger log = Logger.getLogger(ValidationLevel.class);
 	ValidationLevel(int lvl) {
 		// TODO Auto-generated constructor stub
 		choice = lvl;

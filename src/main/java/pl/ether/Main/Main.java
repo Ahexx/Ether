@@ -17,15 +17,14 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("SpringBeans.xml");
-        
+
         MainForm mf = (MainForm) ctx.getBean("MainWindow");
         mf.run(args);
 
-        Scheduler s = (Scheduler) ctx.getBean("Scheduler");
-        
+        Scheduler scheduler = (Scheduler) ctx.getBean("Scheduler");
+
         // Przykład buildera
-        WebSite w = new WebSite.WebSiteBuilder().setId(1l).setURL("http://").build();
-        
+        WebSite webSite = new WebSite.WebSiteBuilder().setId(1L).setURL("http://").build();
     }
 
     public static void stop() {
