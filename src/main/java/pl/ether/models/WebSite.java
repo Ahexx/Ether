@@ -1,10 +1,13 @@
 package pl.ether.models;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class WebSite {
+public class WebSite implements Serializable{
 
-    private Long id;
+    
+	private static final long serialVersionUID = 94747376321L;
+	private Long id;
     private String name;
     private String URL;
     private LocalDateTime creationDate;

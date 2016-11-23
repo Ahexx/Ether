@@ -13,6 +13,8 @@
 	<bean id="MainWindow" class="pl.ether.forms.MainForm">
 	</bean>
 	
+	<bean id="StateService" class="pl.ether.Main.StateService"></bean>
+	
 	<task:scheduled-tasks scheduler="myScheduler">
 		<task:scheduled ref="Scheduler" method="run" fixed-delay="60000"/>
 	</task:scheduled-tasks>
