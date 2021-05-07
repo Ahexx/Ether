@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T17:45:50.387Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="BdiMU_ehKD16MrvdDmf4" version="14.6.11" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-05-07T18:48:12.498Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="B-oQ_VpXazT5KHHIRH2J" version="14.6.11" type="github" pages="2">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Use case - users">
     <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#000000" math="0" shadow="0">
       <root>
@@ -82,11 +82,14 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="R-WGCVR6ER8wvfwO40BP" name="Procesy biznesowe">
-    <mxGraphModel dx="1209" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="R-WGCVR6ER8wvfwO40BP" name="Zakup przedmiotu">
+    <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="G442VFAEOQQE8eyMn_FK-0" />
         <mxCell id="G442VFAEOQQE8eyMn_FK-1" parent="G442VFAEOQQE8eyMn_FK-0" />
+        <mxCell id="G442VFAEOQQE8eyMn_FK-2" value="Użytkownik" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;gradientColor=none;" vertex="1" parent="G442VFAEOQQE8eyMn_FK-1">
+          <mxGeometry x="53" y="148" width="30" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
