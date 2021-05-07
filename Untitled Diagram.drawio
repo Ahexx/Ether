@@ -1,9 +1,54 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T17:21:04.454Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="06gQHrvk687X73aBW4ww" version="14.6.11" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-07T17:29:19.170Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="Zh8RL3WB2qeKgNJl5UEc" version="14.6.11" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
-    <mxGraphModel dx="1727" dy="984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#000000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-3" value="Logowanie" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="245" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-4" value="Rejestracja" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="286" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-5" value="Przeglądanie ofert" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="327" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-6" value="Wyszukiwanie ofert" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="368" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-7" value="Licytowanie oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="245" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-8" value="Kupno natychmiastowe" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="286" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-9" value="Wystawienie oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="327" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-10" value="Promowanie oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="368" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-11" value="Wystawienie licytacji" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="409" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-12" value="Zaobserwuj użytkownika" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="450" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rlo3ftVfiGXAXxwy3TCN-13" target="Rlo3ftVfiGXAXxwy3TCN-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-13" value="sprzedającego?" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="707" y="431.5" width="144" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-15" value="Edycja oferty / licytacji" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="491" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-16" value="Promowanie oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="532" width="120" height="29" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
