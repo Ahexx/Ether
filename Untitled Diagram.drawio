@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T17:29:19.170Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="Zh8RL3WB2qeKgNJl5UEc" version="14.6.11" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-07T17:34:59.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="3PQdEXlTAA8HteobzsWc" version="14.6.11" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
     <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#000000" math="0" shadow="0">
       <root>
@@ -37,17 +37,38 @@
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-12" value="Zaobserwuj użytkownika" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="505" y="450" width="120" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rlo3ftVfiGXAXxwy3TCN-13" target="Rlo3ftVfiGXAXxwy3TCN-12">
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=144;exitDy=30;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rlo3ftVfiGXAXxwy3TCN-13" target="Rlo3ftVfiGXAXxwy3TCN-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-13" value="sprzedającego?" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
-          <mxGeometry x="707" y="431.5" width="144" height="66" as="geometry" />
+          <mxGeometry x="284" y="435" width="144" height="66" as="geometry" />
         </mxCell>
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-15" value="Edycja oferty / licytacji" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="505" y="491" width="120" height="29" as="geometry" />
         </mxCell>
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-16" value="Promowanie oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="505" y="532" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-18" value="Zamknij ofertę" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="245" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-19" value="Zobacz wystawione oferty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="286" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-20" value="Podsumowanie sprzedaży" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="327" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-21" value="Podsumowanie zakupów" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="368" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-22" value="Dodaj produkt&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="781" y="245" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-23" value="Usuń produkt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="781" y="286" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-26" value="Koszyk" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="821" y="213" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
