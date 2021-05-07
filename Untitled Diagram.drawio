@@ -1,12 +1,9 @@
-<mxfile host="app.diagrams.net" modified="2021-05-07T17:34:59.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="3PQdEXlTAA8HteobzsWc" version="14.6.11" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-07T17:41:27.482Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="4YwHuGB-iSGwduP4flHW" version="14.6.11" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
     <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#000000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="300" width="30" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-3" value="Logowanie" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="367" y="245" width="120" height="29" as="geometry" />
         </mxCell>
@@ -69,6 +66,18 @@
         </mxCell>
         <mxCell id="Rlo3ftVfiGXAXxwy3TCN-26" value="Koszyk" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="821" y="213" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-27" value="Podsumowanie" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="781" y="327" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-28" value="Zakup" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="781" y="368" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-30" value="Użyj kuponu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="781" y="409" width="120" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlo3ftVfiGXAXxwy3TCN-31" value="Wystaw kupon zniżkowy" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="573" width="120" height="29" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
