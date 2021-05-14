@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-14T10:08:04.328Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56" etag="URL-5mkz9MSRNdxGYtH5" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-14T10:16:09.594Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56" etag="8bTnCDMTi6pMcLIduWBs" version="14.6.13" type="github">
   <diagram id="KiVv6nq19eRwv4rZpCPW" name="Page-1">
     <mxGraphModel dx="1209" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -39,6 +39,9 @@
         </mxCell>
         <mxCell id="Eu9j_Z-lttBuagTmPZmE-7" value="Przeglądanie produktów" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="373" y="380" width="89" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="Eu9j_Z-lttBuagTmPZmE-8" value="Promuj produkt" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="373" y="427" width="89" height="34" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
